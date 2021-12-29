@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+
+        .popup-button{
+            background-color:rgb(244, 185, 66);
+            width:100px;
+            height:50px;
+            border:3px solid rgb(107, 154, 196);
+            font-family: 'Courier New', Courier, monospace;
+            font-size:20px;
+            color:rgb(239, 242, 241);
+            cursor:pointer;
+            border-radius:20px;
+        }
+
+        .popup{
+            position: fixed;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+
+            background-color: rgb(0,0,0,0.7);
+
+            display: flex;
+            justify-content: center;
+            align-items:center ;
+        }
+
+        .popup-content{
+            background: #FFFFFF;
+            box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            width: 528px;
+            height: 581px;
+            padding:40px;
+        }
+
+        .popup-title{
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight:700;
+            font-size: 20px;
+            text-align: center;
+            color: #212121;
+            margin-bottom:12px;
+        }
+
+        .popup-subtitel{
+            font-family: 'Roboto', sans-serif;
+            color: #212121;
+            font-size:12px;
+            margin-top:10px;
+        }
+
+        .popup-input{
+        border:2px solid rgba(33, 33, 33, 0.2);
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin-bottom:4px;
+        width:100%;
+        height:40px;
+        }
+
+        .popup-input:focus{
+            border-color: #2196F3;
+            outline: none;
+        }
+
+        .popup-text:focus{
+            border-color: #2196F3;
+            outline: none;
+        }
+
+        .popup-text{
+        resize: none;
+        width:100%;
+        height: 120px;
+        border:2px solid rgba(33, 33, 33, 0.2);
+        box-sizing: border-box;
+        border-radius: 4px;
+        padding:12px 16px 12px 16px;
+        }
+
+        .popup-bottom{
+            text-align: center;
+        }
+
+        .popup-text-small{
+            display: inline-block;
+            font-family: Roboto;
+            font-weight:400;
+            font-size: 14px;
+            color: #757575;
+            margin:20px 51px 30px 8px;
+        }
+
+        .popup-link{
+           
+        }
+
+        .button{
+            background: #2196F3;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+            border-radius: 4px;
+            width: 200px;
+            height: 50px;
+            border: none;
+            margin:30px 164px 40px 164px;
+
+            font-family: Roboto;
+            font-weight:700;
+            font-size: 16px;
+            text-align: center;
+            color: #FFFFFF;
+
+        }
+
+        .popup-checkbox::before{
+            display:inline-block;
+            width:16px;
+            height:16px;
+            border:2px solid #2196F3;
+
+        }
+
+    </style>
+
+</head>
+<body>
+    <button class="popup-button">Pop up button</button>
+
+    <div class="popup">
+        <div class="popup-content">
+            <form class="popup-form">
+                <div class="popup-title">Оставьте свои данные, мы вам перезвоним </div>
+
+                <label class="popup-label">
+                    <div class="popup-subtitel">Имя</div>
+                    <div class="popup-input-wraper">
+                    <input type="text" class="popup-input">
+                    </div>
+                </label>
+
+                <label class="popup-label">
+                    <div class="popup-subtitel">Телефон</div>
+                    <div class="popup-input-wraper">
+                    <input type="tel" class="popup-input">
+                    </div>
+                </label>
+
+                <label class="popup-label">
+                    <div class="popup-subtitel">Почта</div>
+                    <div class="popup-input-wraper">
+                    <input type="email" class="popup-input">
+                    </div>
+                </label>
+
+                <label class="popup-label">
+                    <div class="popup-subtitel">Коментарий</div>
+                   <textarea  class="popup-text" placeholder="Введите текст"></textarea>
+                </label>
+
+
+                <div class="popup-bottom">
+                    <input class="popup-checkbox" type="checkbox">
+                    <div class="popup-text-small"> Соглашаюсь с рассылкой и принимаю <a href="#" class="popup-link"> Условия договора</a></div>
+                    <div class="popup-button-send">
+                    <button class="button">Отправить</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
